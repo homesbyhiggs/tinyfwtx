@@ -1,0 +1,17 @@
+baseURL = "https://tinyfwtx.com"   # or "/" for local dev; set your real domain for production
+languageCode = "en-us"
+title = "Higgs Homestead Tiny Home Community — Fort Worth, TX"
+
+[params]
+brand = "Higgs Homestead Tiny Home Community"
+tagline = "Coming Soon affordable tiny-home living with community, 20 minutes SE of Fort Worth."
+typeform_url = "https://your-typeform-link.example"         # TODO: replace
+consult_url  = "https://calendly.com/your-schedule/consult" # TODO: replace
+contact_email = "info@yourexample.com"
+phone = "(555) 555-5555"
+city = "Fort Worth"
+state = "TX"
+map_url = "https://maps.google.com/?q=Fort+Worth%2C+TX"
+
+[pagination]
+pagerSize = 10

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ .Title }} | {{ site.Title }}</title>
+  {{- with .Params.description -}}<meta name="description" content="{{ . }}">{{ end }}
+  <meta name="robots" content="index,follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  <meta property="og:title" content="{{ .Title }}">
+  {{- with .Params.description -}}<meta property="og:description" content="{{ . }}">{{ end }}
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ site.Params.brand }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileHomePark",
+    "name": {{ site.Params.brand | jsonify }},
+    "url": {{ .Permalink | jsonify }},
+    "description": {{ .Params.description | default site.Params.tagline | jsonify }},
+    "telephone": {{ site.Params.phone | jsonify }},
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": {{ site.Params.city | jsonify }},
+      "addressRegion": {{ site.Params.state | jsonify }}
+    }
+  }
+  </script>
+</head>
+<body>
+  {{ partial "nav.html" . }}
+  <main class="container">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+
+  <!-- Smooth scroll for same-page anchors -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) { e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+      });
+    });
+  </script>
+</body>
+</html>

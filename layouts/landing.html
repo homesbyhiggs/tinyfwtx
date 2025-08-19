@@ -1,0 +1,72 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Fort Worth tiny-home living—under live oaks with real community</h1>
+    <p class="lede">{{ site.Params.tagline }}</p>
+    <div class="cta">
+      <a class="btn primary" href="{{ site.Params.typeform_url }}" target="_blank" rel="noopener">Join the mailing list</a>
+      <a class="btn" href="{{ site.Params.consult_url }}" target="_blank" rel="noopener">Book a consultation</a>
+    </div>
+    <p class="note">Lots leased at market rate based on tiny home size. Residents cover their own utilities.</p>
+  </div>
+</section>
+
+<section id="amenities" class="features">
+  <h2>Amenities planned for opening</h2>
+  <ul class="grid-3">
+    <li><h3>Dog park &amp; dog wash</h3><p>Fenced run area and a rinse station for muddy adventures.</p></li>
+    <li><h3>Community center</h3><p>Kitchen, lounge space, and full baths for gatherings.</p></li>
+    <li><h3>Fitness &amp; pool</h3><p>Small gym plus a pool for Texas summers.</p></li>
+    <li><h3>High-speed internet</h3><p>Work from home with reliable connectivity.</p></li>
+    <li><h3>Shaded lots</h3><p>Live oaks and a peaceful setting 20 minutes SE of Fort Worth.</p></li>
+    <li><h3>Bring your tiny home</h3><p>Sites sized for small, large, and premium footprints.</p></li>
+  </ul>
+</section>
+
+<section id="who" class="audience">
+  <h2>Built for doers and downsizers</h2>
+  <div class="grid-2">
+    <div>
+      <h3>Young professionals</h3>
+      <p>Keep monthly costs predictable, skip the maintenance of a traditional house, and focus on career and life.</p>
+    </div>
+    <div>
+      <h3>Retirees</h3>
+      <p>Right-size without giving up comfort—enjoy community, amenities, and flexibility if you ever want to move.</p>
+    </div>
+  </div>
+  <p class="lede">Own your home, not the headaches. Stop renting without building equity—and gain a neighborhood, not just a pad.</p>
+</section>
+
+<section id="location" class="location">
+  <h2>Location</h2>
+  <p>We’re approximately 20 minutes southeast of Fort Worth, TX. Easy access to the city, tucked away under the oaks.</p>
+  <p><a class="btn ghost" href="{{ site.Params.map_url }}" target="_blank" rel="noopener">Open in Maps</a></p>
+</section>
+
+<section class="cta wide">
+  <h2>Be first to hear when sites open</h2>
+  <p>Join the mailing list for opening timelines, lot availability, and preview events.</p>
+  <div class="cta">
+    <a class="btn primary" href="{{ site.Params.typeform_url }}" target="_blank" rel="noopener">Join the mailing list</a>
+    <a class="btn" href="{{ site.Params.consult_url }}" target="_blank" rel="noopener">Book a consultation</a>
+  </div>
+  <small class="note">You can unsubscribe anytime.</small>
+</section>
+
+<section class="faq">
+  <h2>FAQ</h2>
+  <details>
+    <summary>How is pricing set?</summary>
+    <p>Lots are leased at market rates and vary with tiny home size and site type (small, large, premium).</p>
+  </details>
+  <details>
+    <summary>Who pays utilities?</summary>
+    <p>Residents pay for their own utilities. Community internet and shared-area utilities are provided by the park.</p>
+  </details>
+  <details>
+    <summary>Can I bring my own tiny home?</summary>
+    <p>Yes—sites are designed for park-model or tiny homes within community guidelines. Final standards will be published before opening.</p>
+  </details>
+</section>
+{{ end }}
