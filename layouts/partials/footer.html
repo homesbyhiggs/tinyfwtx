@@ -1,12 +1,11 @@
 <footer class="site-footer">
-  <div class="wrap">
-    <div>
-      <strong>{{ site.Params.brand }}</strong><br/>
-      {{ site.Params.city }}, {{ site.Params.state }}
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <strong>{{ site.Params.brand }}</strong>
+      <p>{{ site.Params.city }}, {{ site.Params.state }}</p>
     </div>
     <div class="foot-links">
-      <a href="{{ site.Params.typeform_url }}" target="_blank" rel="noopener">Join the mailing list</a>
-      <a href="{{ site.Params.consult_url }}" target="_blank" rel="noopener">Book a consultation</a>
+      <a href="{{ site.Params.typeform_url }}" target="_blank" rel="noopener">Get Early Access</a>
       <a href="mailto:{{ site.Params.contact_email }}">Email us</a>
     </div>
   </div>
